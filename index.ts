@@ -96,4 +96,3 @@ function displayDefinitions(definitions: WordDefinition[]): void {
     `;
   });
 }
-
