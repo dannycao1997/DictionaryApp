@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "noEmitOnError": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "/Users/danny/Projects/WhatisTypeScript/index.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
