@@ -1,40 +1,58 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-
 //import './style.css';
 
-const form = document.querySelector('#defineform');
-const resultsContainer = document.querySelector('.bg-light .lead');
-form.onsubmit = (event) => __awaiter(void 0, void 0, void 0, function* () {
-    event.preventDefault();
-    const formData = new FormData(form);
-    const word = formData.get('defineword');
-    try {
-        const response = yield fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
-        if (!response.ok) {
-            resultsContainer.innerHTML = `<p>No definition found for "${word}".</p>`;
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('#defineform');
+    const resultsContainer = document.getElementById('results-container');
+
+    if (!form || !resultsContainer) {
+        console.error("Form or results container not found in the DOM.");
+        return;
+    }
+
+    form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const wordInput = form.querySelector('input[name="defineword"]');
+        const word = wordInput.value.trim();
+
+        if (!word) {
+            resultsContainer.innerHTML = `<p>Please enter a word to define.</p>`;
             return;
         }
-        const data = yield response.json();
-        displayDefinitions(data, word);
-    }
-    catch (error) {
-        console.error('Error fetching the definition:', error);
-        resultsContainer.innerHTML = `<p>An error occurred while fetching the definition.</p>`;
+
+        resultsContainer.innerHTML = `<p>Loading...</p>`;
+
+        try {
+            const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+            if (!response.ok) {
+                throw new Error(`No definition found for "${word}"`);
+            }
+            const data = await response.json();
+            displayDefinitions(data);
+        } catch (error) {
+            console.error('Error fetching the definition:', error);
+            resultsContainer.innerHTML = `<p>An error occurred while fetching the definition. Please try again later.</p>`;
+        }
+    });
+
+    function displayDefinitions(definitions) {
+        if (!definitions.length) {
+            resultsContainer.innerHTML = `<p>No definitions found.</p>`;
+            return;
+        }
+
+        resultsContainer.innerHTML = '';
+        definitions.forEach((definition) => {
+            const phoneticsHtml = definition.phonetics.map(p =>
+                `<span>${p.text} ${p.audio ? `<a href="https:${p.audio}" target="_blank"></a>` : ''}</span>`
+            ).join(', ');
+
+            const meaningsHtml = definition.meanings.map(meaning =>
+                `<div><h4>${meaning.partOfSpeech}</h4><ul>` +
+                meaning.definitions.map(def => `<li>${def.definition}</li>`).join('') +
+                `</ul></div>`
+            ).join('');
+
+            resultsContainer.innerHTML += `<h3>${definition.word} ${phoneticsHtml}</h3>${meaningsHtml}`;
+        });
     }
 });
-function displayDefinitions(definitions, word) {
-    resultsContainer.innerHTML = `<h2>Definitions of ${word}:</h2>`;
-    definitions.forEach((entry) => {
-        const meanings = entry.meanings.map((meaning) => `<li>${meaning.partOfSpeech}: ${meaning.definitions.map(def => def.definition).join('; ')}</li>`).join('');
-        resultsContainer.innerHTML += `<ul>${meanings}</ul>`;
-    });
-}
-//# sourceMappingURL=index.js.map

@@ -62,6 +62,7 @@ interface WordDefinition {
 
 
 // Function to display word definitions and related data
+
 function displayDefinitions(definitions: WordDefinition[]): void {
   if (definitions.length === 0) {
     resultsContainer.innerHTML = `<p>No definitions found.</p>`;
