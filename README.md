@@ -22,7 +22,7 @@ Write a program in Typescript to handle the action of calling the dictionary api
 Demos on Monday!
 
 
-****UPDATE****
+UPDATED
 PHOTOS AND SAMPLE OF MY DICTIONARY APP
 
 <img width="1440" alt="DictionaryApp" src="https://github.com/dannycao1997/DictionaryApp/assets/152752814/8117f564-47ee-4c49-899c-0f0a6d939054">
