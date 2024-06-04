@@ -1,29 +1,27 @@
-# WhatsTypescript
-what is typescript?
+# My First Dictionary App
 
-there is this language, [Typescript](https://www.typescriptlang.org).
-Microsoft maintains it, it's become a very intersting contender for the best new front end language.
-It's different in that it is is _strongly-typed_ but at it's code it is bascially Javascript.
+## 🚀 Overview
+The Dictionary App is a powerful tool that provides users with easy access to comprehensive word definitions, pronunciations, and usage examples. Leveraging the extensive dictionaryapi.dev, the app offers fast and accurate search results. Built with modern web technologies, it ensures a seamless user experience across various devices.
 
-You job is learn enough about Typescript to build a pretty simple app.
+## <a name="features"><img src="https://img.icons8.com/?size=100&id=KGEqZ4cYLMvt&format=png&color=000000" width="40" height="40" alt="Dannyverse Logo"> Tech Stack</a>
 
-Build a "web based" Dictionary app. 
-The app has a single page, like a very simple google interface, where the user types in an english word and gets a defintion of the word.
+**The Dictionary App** is built using the following technologies:</summary>
 
-For the source of your definitions, use this API: 
-`https://dictionaryapi.dev`
+- HTML: The standard markup language for creating web pages.
+- TypeScript: A strongly typed programming language that builds on JavaScript, providing better tooling at any scale.
+- JavaScript: The programming language of the Web, essential for any modern web development.
+- Bootstrap: A powerful front-end framework for faster and easier web development with responsive design capabilities.
+- dictionaryapi.dev: A free dictionary API for getting word definitions, pronunciations, and usage examples.
 
-For your page styling I have used: `https://getbootstrap.com` 
-There is a simple [html page sample](index.html) to get you started.
-It's an example of using bootstrap for styling a page without a lot of effort.
+## <a name="features"><img src="https://img.icons8.com/?size=100&id=yu8zbS5Jw24l&format=png&color=000000" width="40" height="40" alt="App"> Features</a>
 
-Write a program in Typescript to handle the action of calling the dictionary api from the page, and displaying the result, in a nice fashion.
+- Comprehensive Definitions: Quickly find detailed definitions for any word.
+- Pronunciations: Hear how words are pronounced to improve your language skills.
+- Usage Examples: See words used in context to better understand their meaning and usage.
+- User-Friendly Design: A clean and intuitive interface that makes navigating the dictionary a breeze.
+- Real-Time Search: Get instant results as you type, enhancing the search experience.
+- Responsive Design: Ensures optimal usability across various devices and screen sizes.
 
-Demos on Monday!
-
-
-UPDATED
-PHOTOS AND SAMPLE OF MY DICTIONARY APP
 
 <img width="1440" alt="DictionaryApp" src="https://github.com/dannycao1997/DictionaryApp/assets/152752814/8117f564-47ee-4c49-899c-0f0a6d939054">
 <img width="1440" alt="DictonaryApp2" src="https://github.com/dannycao1997/DictionaryApp/assets/152752814/804520d5-dff0-4080-b727-8eaaa62aee47">
