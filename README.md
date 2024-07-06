@@ -1,17 +1,16 @@
-# My First Dictionary App
+# My Advanced Dictionary Application
 
 ## 🚀 Overview
-The Dictionary App is a powerful tool that provides users with easy access to comprehensive word definitions, pronunciations, and usage examples. Leveraging the extensive dictionaryapi.dev, the app offers fast and accurate search results. Built with modern web technologies, it ensures a seamless user experience across various devices.
+Created a robust dictionary app offering users comprehensive word definitions, pronunciations, and usage examples. Ensured a seamless and intuitive user experience across various devices, significantly enhancing accessibility and learning.
 
 ## <a name="features"><img src="https://img.icons8.com/?size=100&id=KGEqZ4cYLMvt&format=png&color=000000" width="40" height="40" alt="Dannyverse Logo"> Tech Stack</a>
 
-**The Dictionary App** is built using the following technologies:</summary>
+**The Advanced Dictionary Application** is built using the following technologies:</summary>
 
 - HTML: The standard markup language for creating web pages.
 - TypeScript: A strongly typed programming language that builds on JavaScript, providing better tooling at any scale.
 - JavaScript: The programming language of the Web, essential for any modern web development.
 - Bootstrap: A powerful front-end framework for faster and easier web development with responsive design capabilities.
-- dictionaryapi.dev: A free dictionary API for getting word definitions, pronunciations, and usage examples.
 
 ## <a name="features"><img src="https://img.icons8.com/?size=100&id=yu8zbS5Jw24l&format=png&color=000000" width="40" height="40" alt="App"> Features</a>
 
