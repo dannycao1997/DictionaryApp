@@ -1,5 +1,7 @@
 # My Advanced Dictionary Application
 
+<img src="https://github.com/dannycao1997/DictionaryApp/blob/1b2e1b4069f02f47b5504759bdefdbc5646488fd/dictionary.gif"/>
+
 ## 🚀 Overview
 Created a robust dictionary app offering users comprehensive word definitions, pronunciations, and usage examples. Ensured a seamless and intuitive user experience across various devices, significantly enhancing accessibility and learning.
 
@@ -20,10 +22,5 @@ Created a robust dictionary app offering users comprehensive word definitions, p
 - User-Friendly Design: A clean and intuitive interface that makes navigating the dictionary a breeze.
 - Real-Time Search: Get instant results as you type, enhancing the search experience.
 - Responsive Design: Ensures optimal usability across various devices and screen sizes.
-
-
-<img width="1440" alt="DictionaryApp" src="https://github.com/dannycao1997/DictionaryApp/assets/152752814/8117f564-47ee-4c49-899c-0f0a6d939054">
-<img width="1440" alt="DictonaryApp2" src="https://github.com/dannycao1997/DictionaryApp/assets/152752814/804520d5-dff0-4080-b727-8eaaa62aee47">
-<img width="1440" alt="DictionaryApp3" src="https://github.com/dannycao1997/DictionaryApp/assets/152752814/796ae0ce-edd1-4485-acc6-75ed128b010e">
 
 
